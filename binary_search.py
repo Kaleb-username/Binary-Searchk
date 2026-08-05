@@ -5,6 +5,9 @@ def find(search_list, value):
         middle = highest - lowest
         if search_list[middle] == value:
             return search_list.index(search_list[middle])
-        
+        elif search_list[middle] > value:
+            highest -= 1
+        elif search_list[lowest] < value:
+            lowset += 1
         
     raise ValueError("value not in array")
